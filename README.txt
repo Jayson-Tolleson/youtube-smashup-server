@@ -7,8 +7,7 @@ Instruction:
 
 1. sudo git clone https://github.com/Jayson-Tolleson/youtube-smashup-server.git
 2. cd youtube-smashup-server
-3. sudo cp -r video /var
-3. cd /var/video
+3. sudo cp -r video /var && cd /var/video
 4. sudo nano webserver.py and add your cert and key info
 5. sudo mkdir movies
 6. sudo nohup python3 webserver.py &
