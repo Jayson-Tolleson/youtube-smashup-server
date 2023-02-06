@@ -125,7 +125,7 @@ for l in list:
 
 f.close()
 print ('Starting FFMPEG...')
-ffmpeg = ('''cd /var/video/'''+pid+'''/videos2/ && sudo ffmpeg -f concat -safe 0 -i vidslist.txt -vf mpdecimate=hi=200:lo=200:frac=1:max=0,setpts=N/FRAME_RATE/TB -vcodec libx264 -crf 0 -vsync vfr -y output.mp4 && sudo cp output.mp4 /var/video/movies/'''+str(searchterms).replace(' ',',').replace('/',',')+str(number)+'''.mp4''')
+ffmpeg = ('''cd /var/video/'''+pid+'''/videos2/ && sudo ffmpeg -f concat -safe 0 -i vidslist.txt -vf mpdecimate,setpts=N/FRAME_RATE/TB -vcodec libx264 -crf 0 -vsync vfr -y output.mp4 && sudo cp output.mp4 /var/video/movies/'''+str(searchterms).replace(' ',',').replace('/',',')+str(number)+'''.mp4''')
 subprocess.run(ffmpeg, shell=True, stderr=subprocess.STDOUT)
 remove = ('cd /var/video/ && sudo rm -r '+pid) 
 subprocess.run(remove, shell=True, stderr=subprocess.STDOUT)
