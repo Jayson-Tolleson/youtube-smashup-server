@@ -15,7 +15,7 @@ app = Flask(__name__)
 def out(searchterms, number, s1):
   def output():
     yield """<html><body style='color:MediumSeaGreen;'><h1><div id='data' style='text-align: center;'>nothing received yet...for </div></h1><script>var div = document.getElementById('data');</script></body></html>"""
-    p = subprocess.Popen('sudo python3 /var/video/cgi-bin/yt3recent3.py '+str(searchterms)+' '+str(number)+' '+str(s1), shell=True, stdout=subprocess.PIPE, stderr=STDOUT)
+    p = subprocess.Popen('sudo python3 /var/video/cgi-bin/ytsmash.py '+str(searchterms)+' '+str(number)+' '+str(s1), shell=True, stdout=subprocess.PIPE, stderr=STDOUT)
     while True:
         out = ((p.stdout.readline()).strip()) 
         out =str(out)
