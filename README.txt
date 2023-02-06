@@ -1,6 +1,6 @@
 YOUTUBE SMASH-UP COMPILER!!!
 SERVER
-ffmpeg python3 flask yt-dlp pytube youtube_search ....
+ffmpeg yt-dlp python3 flask pytube youtube_search ....
 port: 8000,8080
 
 Instruction:
