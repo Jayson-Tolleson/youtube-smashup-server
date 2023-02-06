@@ -4,7 +4,7 @@ from http.server import HTTPServer, CGIHTTPRequestHandler
 
 import ssl 
 
-webdir = '/var/youtube-smashup-server/' 
+webdir = '/var/video/' 
 port = 8080 
 os.chdir(webdir) 
 srvaddr=('', port) 
